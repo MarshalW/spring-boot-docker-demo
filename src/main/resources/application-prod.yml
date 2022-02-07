@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: "${MYSQL_USERNAME:root}"
+    password: "${MYSQL_PASSWORD:root}"
+    url: "jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_example"
+  jpa:
+    database: mysql
+    hibernate:
+      generate-ddl: true
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
